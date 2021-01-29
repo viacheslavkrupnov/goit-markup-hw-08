@@ -1,0 +1,108 @@
+.button {
+  color: $titleTextColor;
+  background-color: $primaryWhiteColor;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeMedium;
+  line-height: 1.87;
+  letter-spacing: $letterSpacingSecondary;
+  text-decoration: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+.button.primary {
+  color: $primaryWhiteColor;
+  background-color: $accentColor;
+}
+
+.button-subscription {
+  width: 200px;
+  height: 50px;
+  color: $titleTextColor;
+  background-color: $primaryWhiteColor;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeMedium;
+  line-height: 1.87;
+  letter-spacing: $letterSpacingSecondary;
+
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: $border transparent;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: $transitionDuration;
+  transition-timing-function: $timingFunction;
+}
+
+.button-subscription.primary {
+  color: $primaryWhiteColor;
+  background-color: $accentColor;
+}
+
+.icon-subscription {
+  margin-left: 10px;
+}
+
+.button-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline: transparent;
+  border: $border rgba(0, 0, 0, 0.1);
+  background-color: $primaryWhiteColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  transition-property: color;
+  transition-duration: $transitionDuration;
+  transition-timing-function: $timingFunction;
+
+  &:hover {
+    color: $accentColor;
+  }
+}
+
+.button-modal {
+  width: 200px;
+  height: 50px;
+  color: $titleTextColor;
+  background-color: $primaryWhiteColor;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeMedium;
+  line-height: 1.87;
+  letter-spacing: $letterSpacingSecondary;
+
+  display: block;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: $border transparent;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: $transitionDuration;
+  transition-timing-function: $timingFunction;
+}
+
+.button-modal.primary {
+  color: $primaryWhiteColor;
+  background-color: $accentColor;
+}

@@ -1,0 +1,67 @@
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    transition-property: background-color, transform;
+    transition-duration: $transitionDuration;
+    transition-timing-function: $timingFunction;
+  }
+}
+
+.link:hover .portfolio-thumb::before,
+.link:focus .portfolio-thumb::before {
+  transform: translateY(0);
+}
+
+.card-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  bottom: -100%;
+  left: 0;
+  opacity: 1;
+
+  transition-property: transform;
+  transition-duration: $transitionDuration;
+  transition-timing-function: $timingFunction;
+}
+
+.link:hover .card-text,
+.link:focus .card-text {
+  opacity: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  top: 100%;
+  left: 0;
+  transform: translateY(-100%);
+}
+
+.text-description {
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: $fontWeightRegular;
+  font-size: $fontSizeBig;
+  line-height: 1, 55;
+  color: $primaryWhiteColor;
+}

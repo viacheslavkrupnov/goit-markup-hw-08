@@ -1,0 +1,28 @@
+.section.generic {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section.generic-work {
+  padding-bottom: 94px;
+}
+
+.section.our-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: $secondaryBgColor;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+  color: $titleTextColor;
+  font-weight: $fontWeightBold;
+  font-size: 36px;
+  line-height: $lineHeightMedium;
+}
+
+.section-title.team {
+  text-align: center;
+}

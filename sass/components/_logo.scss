@@ -1,0 +1,71 @@
+.logo {
+  color: $accentColor;
+  font-family: 'Raleway';
+  font-size: 26px;
+  line-height: $lineHeightBig;
+  text-decoration: none;
+}
+
+.logo.footer {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.logo-header {
+  color: $titleTextColor;
+}
+
+.logo-footer {
+  color: $primaryWhiteColor;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.social-logo {
+  border: none;
+  display: flex;
+  content: '';
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  border-radius: 50%;
+  background-position: center;
+  color: #afb1b8;
+  fill: currentColor;
+
+  transition-property: color, background-color, fill;
+  transition-duration: $transitionDuration;
+  transition-timing-function: $timingFunction;
+
+  &:hover,
+  &:focus {
+    color: $primaryWhiteColor;
+    background-color: $accentColor;
+  }
+}
+
+.social-logo.bottom {
+  border: none;
+  display: flex;
+  content: '';
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  border-radius: 50%;
+  background-position: center;
+  color: $primaryWhiteColor;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
+  transition-duration: $transitionDuration;
+  transition-timing-function: $timingFunction;
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+  }
+}
