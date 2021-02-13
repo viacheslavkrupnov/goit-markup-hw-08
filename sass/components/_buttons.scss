@@ -19,6 +19,52 @@
   background-color: $accentColor;
 }
 
+.menu-button {
+  display: inline-flex;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+  padding: 10px 0;
+
+  z-index: 1;
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
+
+  @media screen and (min-width: $tabletWidth) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktopWidth) {
+    display: none;
+  }
+
+  .icon-menu,
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  .icon-cross,
+  &.is-open .icon-menu {
+    display: none;
+  }
+}
+
+// .menu-button .icon-cross {
+//   display: none;
+// }
+
+// .menu-button.is-open .icon-cross {
+//   display: block;
+// }
+
+// .menu-button.is-open .icon-menu {
+//   display: none;
+// }
+
 .button-subscription {
   width: 200px;
   height: 50px;

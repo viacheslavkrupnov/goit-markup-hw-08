@@ -22,11 +22,10 @@
 
     <header class="page-header">
       <div class="container">
+        <a href="./index.html" class="logo"
+          >Web<span class="logo-header">Studio</span>
+        </a>
         <nav>
-          <a href="./index.html" class="logo"
-            >Web<span class="logo-header">Studio</span>
-          </a>
-
           <ul class="site-nav list">
             <li class="item"><a href="" class="link current">Студия</a></li>
             <li class="item">
@@ -52,6 +51,23 @@
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="menu-button is-open"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40px"
+            height="40px"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-cross" href="./images/sprite.svg#cross"></use>
+            <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>Content</div>
       </div>
     </header>
 
@@ -394,7 +410,7 @@
     <!-- Футер -->
     <footer class="page-footer">
       <div class="container">
-        <div class="footer-adress">
+        <div class="footer-address">
           <a href="./index.html" class="logo footer"
             >Web<span class="logo-footer">Studio</span>
           </a>
@@ -532,5 +548,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

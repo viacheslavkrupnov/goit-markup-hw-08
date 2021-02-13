@@ -1,15 +1,14 @@
 .page-header {
+  position: relative;
   background-color: $primaryWhiteColor;
   border-bottom: $border #ececec;
 
   .container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
-
-/* Site-nav */
 
 .contacts,
 .site-nav {
@@ -17,53 +16,61 @@
 }
 
 .site-nav {
-  display: inline-flex;
-  margin-left: 93px;
+  display: none;
 
-  .item {
-    display: block;
-  }
+  @media screen and (min-width: $tabletWidth) {
+    display: inline-flex;
+    .item {
+      display: block;
+    }
 
-  .item + .item {
-    margin-left: 50px;
-  }
+    .item + .item {
+      margin-left: 50px;
+    }
 
-  .link {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    .link {
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 32px;
 
-    color: $titleTextColor;
-    font-weight: $fontWeightMedium;
-    line-height: $lineHeightSmall;
-    text-decoration: none;
+      color: $titleTextColor;
+      font-weight: $fontWeightMedium;
+      font-size: $fontSizeSmall;
+      line-height: $lineHeightSmall;
+      letter-spacing: 0.02em;
+      text-decoration: none;
 
-    position: relative;
+      position: relative;
 
-    transition-property: color;
-    transition-duration: $transitionDuration;
-    transition-timing-function: $timingFunction;
+      transition-property: color;
+      transition-duration: $transitionDuration;
+      transition-timing-function: $timingFunction;
 
-    &:hover,
-    &:focus {
+      &:hover,
+      &:focus {
+        color: $accentColor;
+      }
+    }
+
+    .link.current {
       color: $accentColor;
+    }
+
+    .link.current::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $accentColor;
+
+      position: absolute;
+      bottom: -1px;
     }
   }
 
-  .link.current {
-    color: $accentColor;
-  }
-
-  .link.current::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: $accentColor;
-
-    position: absolute;
-    bottom: -1px;
+  @media screen and (min-width: $desktopWidth) {
+    margin-left: 93px;
   }
 }
 
@@ -75,42 +82,75 @@
   fill: currentColor;
 }
 
-/* Contacts */
-
 .contacts {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+  display: none;
 
-  .item + .item {
-    margin-left: 50px;
+  @media screen and (min-width: $tabletWidth) {
+    display: inline-block;
+
+    .item:nth-child(2n) {
+      margin-top: 10px;
+    }
+
+    .link {
+      display: flex;
+
+      color: $primaryTextColor;
+      font-weight: $fontWeightMedium;
+      font-size: 12px;
+      line-height: $lineHeightMedium;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+
+      transition-property: color, fill;
+      transition-duration: $transitionDuration;
+      transition-timing-function: $timingFunction;
+
+      &:hover,
+      &:focus {
+        color: $accentColor;
+      }
+    }
   }
 
-  .link {
+  @media screen and (min-width: $desktopWidth) {
     display: flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    margin-left: auto;
 
-    color: $primaryTextColor;
-    font-weight: $fontWeightMedium;
-    line-height: $lineHeightSmall;
-    text-decoration: none;
+    .item + .item {
+      margin-left: 50px;
+      margin-top: 0;
+    }
 
-    transition-property: color, fill;
-    transition-duration: $transitionDuration;
-    transition-timing-function: $timingFunction;
+    .link {
+      display: flex;
+      align-items: center;
+      padding-top: 32px;
+      padding-bottom: 32px;
 
-    &:hover,
-    &:focus {
-      color: $accentColor;
+      color: $primaryTextColor;
+      font-weight: $fontWeightMedium;
+      font-size: $fontSizeSmall;
+      line-height: $lineHeightSmall;
+      text-decoration: none;
+
+      transition-property: color, fill;
+      transition-duration: $transitionDuration;
+      transition-timing-function: $timingFunction;
+
+      &:hover,
+      &:focus {
+        color: $accentColor;
+      }
     }
   }
 }
 
 .contact-icon {
-  margin-right: 10px;
-
+  @media screen and (min-width: $tabletWidth) {
+    margin-right: 8px;
+  }
   transition-property: fill;
   transition-duration: $transitionDuration;
   transition-timing-function: $timingFunction;
@@ -118,5 +158,24 @@
   &:hover,
   &:focus {
     fill: $accentColor;
+  }
+}
+
+.menu-container {
+  display: none;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0) scale(1);
+  width: 100%;
+  background-color: $primaryWhiteColor;
+  text-align: left;
+  padding: 48px 40px;
+  width: 480px;
+  height: 796px;
+
+  &.is-open {
+    display: block;
   }
 }

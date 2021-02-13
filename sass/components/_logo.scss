@@ -1,9 +1,14 @@
 .logo {
   color: $accentColor;
   font-family: 'Raleway';
-  font-size: 26px;
-  line-height: $lineHeightBig;
+  font-size: 24px;
+  line-height: $lineHeightMedium;
   text-decoration: none;
+
+  @media screen and (min-width: $desktopWidth) {
+    font-size: 26px;
+    line-height: $lineHeightBig;
+  }
 }
 
 .logo.footer {
