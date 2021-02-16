@@ -30,7 +30,6 @@
 }
 
 .feature-item {
-  width: 450px;
   margin-bottom: 30px;
 
   &:nth-child(4n) {
@@ -65,7 +64,6 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  width: 450px;
   height: 120px;
   background-color: $secondaryBgColor;
   border-radius: 4px;

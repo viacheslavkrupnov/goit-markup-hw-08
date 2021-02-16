@@ -47,6 +47,15 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
+
+  @media screen and (min-width: $tabletWidth) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktopWidth) {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio .btn + .btn {

@@ -5,10 +5,7 @@ textarea {
 .form {
   min-width: 448px;
   margin: 0;
-  padding-left: 35px;
-  padding-right: 45px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px;
 }
 
 .form-title {
@@ -19,8 +16,12 @@ textarea {
 
   font-weight: $fontWeightBold;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: $letterSpacingPrimary;
+
+  @media screen and (min-width: $desktopWidth) {
+    line-height: 1.15;
+  }
 }
 
 .form-field {

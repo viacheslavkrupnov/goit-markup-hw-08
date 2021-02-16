@@ -1,0 +1,114 @@
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0) scale(1);
+  width: 100%;
+  background-color: $primaryWhiteColor;
+  text-align: left;
+  padding: 48px 40px;
+  width: 480px;
+  height: 796px;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  @media screen and (max-width: 767px) {
+    display: none;
+
+    &.is-open {
+      display: block;
+    }
+  }
+}
+
+.nav-mobile,
+.contacts-mobile,
+.social-mobile {
+  @extend %list;
+}
+
+.nav-mobile {
+  .link {
+    color: $titleTextColor;
+    font-weight: $fontWeightMedium;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    margin-bottom: 32px;
+
+    transition-property: color;
+    transition-duration: $transitionDuration;
+    transition-timing-function: $timingFunction;
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
+
+  .link.current {
+    color: $accentColor;
+  }
+
+  &:last-child {
+    margin-bottom: 302px;
+  }
+}
+
+.contacts-mobile {
+  .link {
+    color: $accentColor;
+    font-weight: $fontWeightMedium;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    margin-bottom: 32px;
+
+    transition-property: color;
+    transition-duration: $transitionDuration;
+    transition-timing-function: $timingFunction;
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
+}
+
+.item-mail .link {
+  font-size: 24px;
+  color: $primaryTextColor;
+  margin-bottom: 64px;
+}
+
+.social-mobile {
+  display: inline-flex;
+
+  .link {
+    color: $accentColor;
+    font-weight: $fontWeightMedium;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 4px;
+
+      position: absolute;
+    }
+
+    &:nth-child(-n + 3) {
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+      padding-right: 10px;
+      //   padding-left: 10px;
+    }
+  }
+}

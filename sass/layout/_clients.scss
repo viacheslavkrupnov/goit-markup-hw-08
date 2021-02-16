@@ -2,6 +2,7 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -17,17 +18,25 @@
   transition-duration: $transitionDuration;
   transition-timing-function: $timingFunction;
 
-  &:nth-child(odd) {
-    margin-right: 30px;
-  }
-
-  &:nth-last-child(-n + 2) {
-    margin-bottom: 0;
-  }
-
   &:hover,
   &:focus {
     fill: $accentColor;
+  }
+
+  @media screen and (max-width: 479px) {
+    &:nth-child(6n) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $mobileWidth) {
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
   }
 
   @media screen and (min-width: $tabletWidth) {
