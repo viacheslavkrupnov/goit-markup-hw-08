@@ -3,7 +3,7 @@ textarea {
 }
 
 .form {
-  min-width: 480px;
+  min-width: 320px;
   margin: 0;
   padding: 40px;
 }
@@ -107,5 +107,16 @@ textarea {
   &:focus {
     cursor: pointer;
     outline-color: $accentColor;
+  }
+}
+
+.label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.67;
+
+  @media screen and (min-width: $desktopWidth) {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }
