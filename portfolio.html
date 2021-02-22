@@ -134,13 +134,31 @@
             <li class="works-element">
               <a href="" class="link">
                 <div class="portfolio-thumb">
-                  <img
-                    class="card-image"
-                    src="./images/portfolio1.jpg"
-                    alt="Ноутбук"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: $desktopWidth)"
+                      srcset="
+                        .images/portfolio/desktop/card1.jpg    1x,
+                        .images/portfolio/desktop/card1@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: $tabletWidth)"
+                      srcset="
+                        .images/portfolio/tablet/card1.jpg    1x,
+                        .images/portfolio/tablet/card1@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      srcset="
+                        ./images/portfolio/mobile/card1.jpg    1x,
+                        ./images/portfolio/mobile/card1@2x.jpg 2x
+                      "
+                      class="card-image"
+                      src="./images/portfolio/mobile/card1.jpg"
+                      alt="Ноутбук"
+                    />
+                  </picture>
                   <div class="card-text">
                     <p class="text-description">
                       Технокряк это современная площадка распространения
