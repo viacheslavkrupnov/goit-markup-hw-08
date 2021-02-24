@@ -2,6 +2,7 @@
   display: none;
   position: absolute;
   top: 0;
+
   left: 50%;
   transform: translate(-50%, 0) scale(1);
   background-color: $primaryWhiteColor;
@@ -98,16 +99,17 @@
 
   .link {
     color: $accentColor;
-    font-weight: $fontWeightMedium;
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
     text-decoration: none;
   }
 
   .item {
     padding: 0 10px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+    letter-spacing: 0.02em;
+    font-weight: $fontWeightMedium;
+    font-size: 18px;
+    line-height: 1.22;
 
     &:nth-child(1) {
       padding-left: 0;

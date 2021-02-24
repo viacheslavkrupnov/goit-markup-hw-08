@@ -32,7 +32,7 @@ body.modal-open {
   overflow: hidden;
 }
 
-.img {
+img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -50,7 +50,6 @@ body.modal-open {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  width: 320px;
 }
 
 @media screen and (min-width: 480px) {
@@ -850,7 +849,8 @@ body.modal-open {
 
 .team-item {
   text-align: center;
-  width: 450px;
+  width: 100%;
+  height: auto;
   margin-bottom: 30px;
   background: #fff;
   /* material shadow v1 */
@@ -866,6 +866,7 @@ body.modal-open {
 @media screen and (min-width: 768px) {
   .team-item {
     width: 354px;
+    height: 536px;
   }
   .team-item:nth-last-child(-n + 2) {
     margin-bottom: 0;
@@ -878,6 +879,7 @@ body.modal-open {
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   .team-item {
     width: 270px;
+    height: auto;
     margin-right: 30px;
     margin-bottom: 0;
   }
@@ -1126,16 +1128,18 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .portfolio .btn + .btn:nth-child(4) {
+    margin-left: 8px;
+  }
+}
+
 .works {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.card-image {
-  display: block;
 }
 
 .card-content {
@@ -1148,6 +1152,25 @@ body.modal-open {
   padding-right: 24px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.card-image {
+  display: block;
+  height: 294px;
+}
+
+@media screen and (min-width: 480px) {
+  .card-image {
+    width: 450px;
+    height: 294px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card-image {
+    width: 370px;
+    height: 294px;
+  }
 }
 
 .works-element {
@@ -1170,12 +1193,6 @@ body.modal-open {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-@media screen and (min-width: 768px) {
-  .works-element {
-    width: 450px;
-  }
-}
-
 @media screen and (max-width: 1199px) {
   .works-element:last-child {
     margin-bottom: 0;
@@ -1185,6 +1202,7 @@ body.modal-open {
 @media screen and (min-width: 768px) {
   .works-element {
     width: 354px;
+    height: 404px;
   }
   .works-element:nth-child(odd) {
     margin-right: 30px;
@@ -1255,7 +1273,7 @@ body.modal-open {
   position: absolute;
   content: '';
   width: 100%;
-  height: 100%;
+  height: 294px;
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -1267,6 +1285,27 @@ body.modal-open {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio-thumb {
+    width: 100%;
+    max-height: 294px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-thumb {
+    width: 354px;
+    height: 294px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-thumb {
+    min-width: 370px;
+    height: 294px;
+  }
 }
 
 .link:hover .portfolio-thumb::before,
@@ -1635,7 +1674,6 @@ footer {
     margin-right: auto;
     max-width: 450px;
     max-height: 609px;
-    width: 100%;
   }
 }
 
@@ -1656,7 +1694,7 @@ textarea {
 }
 
 .form {
-  min-width: 320px;
+  width: 100%;
   margin: 0;
   padding: 40px;
 }
@@ -1956,16 +1994,16 @@ textarea {
 
 .social-mobile .link {
   color: #2196f3;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.22;
-  letter-spacing: 0.02em;
   text-decoration: none;
 }
 
 .social-mobile .item {
   padding: 0 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
 }
 
 .social-mobile .item:nth-child(1) {

@@ -178,6 +178,10 @@
           <ul class="work-list list">
             <li class="work-item">
               <img
+                srcset="
+                  ./images/placeholder1.png    1x,
+                  ./images/placeholder1@2x.png 2x
+                "
                 src="./images/placeholder1.png"
                 alt="Програмист за рабочим столом"
                 width="370"
@@ -189,6 +193,10 @@
             </li>
             <li class="work-item">
               <img
+                srcset="
+                  ./images/placeholder2.png    1x,
+                  ./images/placeholder2@2x.png 2x
+                "
                 src="./images/placeholder2.png"
                 alt="Разработка мобильного приложения"
                 width="370"
@@ -200,6 +208,10 @@
             </li>
             <li class="work-item">
               <img
+                srcset="
+                  ./images/placeholder3.png    1x,
+                  ./images/placeholder3@2x.png 2x
+                "
                 src="./images/placeholder3.png"
                 alt="Веб дизайнер работает с планшетом"
                 width="370"
@@ -220,39 +232,27 @@
             <li class="team-item">
               <picture>
                 <source
-                  media="(min-width: $desktopWidth)"
+                  media="(min-width: 1200px)"
                   srcset="
-                    .images/team/desktop/productdesigner.jpg    1x,
-                    .images/team/desktop/productdesigner@3x.jpg 3x
+                    ./images/team/desktop/productdesigner.jpg    1x,
+                    ./images/team/desktop/productdesigner@2x.jpg 2x
                   "
-                  class="card-image"
-                  src="./images/team/desktop/productdesigner.jpg"
-                  alt="Фото Игоря Демьяненко"
-                  width="270"
-                  height="260"
                 />
                 <source
-                  media="(min-width: $tabletWidth)"
+                  media="(min-width: 768px)"
                   srcset="
-                    .images/team/tablet/productdesigner.jpg    1x,
-                    .images/team/tablet/productdesigner@2x.jpg 2x
+                    ./images/team/tablet/productdesigner.jpg    1x,
+                    ./images/team/tablet/productdesigner@2x.jpg 2x
                   "
-                  class="card-image"
-                  src="./images/team/tablet/productdesigner.jpg"
-                  alt="Фото Игоря Демьяненко"
-                  width="354px"
-                  height="374px"
                 />
                 <img
+                  src="./images/team/mobile/productdesigner.jpg"
+                  alt="Фото Игоря Демьяненко"
                   srcset="
                     ./images/team/mobile/productdesigner.jpg    1x,
                     ./images/team/mobile/productdesigner@2x.jpg 2x
                   "
-                  class="card-image"
-                  src="./images/team/mobile/productdesigner.jpg"
-                  alt="Фото Игоря Демьяненко"
-                  width="450"
-                  height="460"
+                  loading="lazy"
                 />
               </picture>
               <div class="team-content">
@@ -291,13 +291,31 @@
               </div>
             </li>
             <li class="team-item">
-              <img
-                class="card-image"
-                src="./images/photo2.jpg"
-                alt="Фото Ольги Репиной"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: $desktopWidth)"
+                  srcset="
+                    ./images/team/desktop/frontenddeveloper.jpg    1x,
+                    ./images/team/desktop/frontenddeveloper@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: $tabletWidth)"
+                  srcset="
+                    ./images/team/tablet/frontenddeveloper.jpg    1x,
+                    ./images/team/tablet/frontenddeveloper@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/mobile/frontenddeveloper.jpg"
+                  alt="Фото Ольга Репина"
+                  srcset="
+                    ./images/team/mobile/frontenddeveloper.jpg    1x,
+                    ./images/team/mobile/frontenddeveloper@2x.jpg 2x
+                  "
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-content">
                 <h3 class="title">Ольга Репина</h3>
                 <p class="profession">Frontend Developer</p>
@@ -334,13 +352,31 @@
               </div>
             </li>
             <li class="team-item">
-              <img
-                class="card-image"
-                src="./images/photo3.jpg"
-                alt="Фото Николая Тарасова"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: $desktopWidth)"
+                  srcset="
+                    ./images/team/desktop/marketing.jpg    1x,
+                    ./images/team/desktop/marketing@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: $tabletWidth)"
+                  srcset="
+                    ./images/team/tablet/marketing.jpg    1x,
+                    ./images/team/tablet/marketing@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/mobile/marketing.jpg"
+                  alt="Фото Николай Тарасов"
+                  srcset="
+                    ./images/team/mobile/marketing.jpg    1x,
+                    ./images/team/mobile/marketing@2x.jpg 2x
+                  "
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-content">
                 <h3 class="title">Николай Тарасов</h3>
                 <p class="profession">Marketing</p>
@@ -377,13 +413,31 @@
               </div>
             </li>
             <li class="team-item">
-              <img
-                class="card-image"
-                src="./images/photo4.jpg"
-                alt="Фото Миаила Ермакова"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: $desktopWidth)"
+                  srcset="
+                    ./images/team/desktop/designer.jpg    1x,
+                    ./images/team/desktop/designer@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: $tabletWidth)"
+                  srcset="
+                    ./images/team/tablet/designer.jpg    1x,
+                    ./images/team/tablet/designer@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/mobile/designer.jpg"
+                  alt="Фото Михаил Ермаков"
+                  srcset="
+                    ./images/team/mobile/designer.jpg    1x,
+                    ./images/team/mobile/designer@2x.jpg 2x
+                  "
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-content">
                 <h3 class="title">Михаил Ермаков</h3>
                 <p class="profession">UI Designer</p>

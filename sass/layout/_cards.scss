@@ -4,10 +4,6 @@
   flex-wrap: wrap;
 }
 
-.card-image {
-  display: block;
-}
-
 .card-content {
   box-sizing: border-box;
   border-left: $border #eeeeee;
@@ -17,6 +13,22 @@
   padding-right: 24px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.card-image {
+  display: block;
+  height: 294px;
+  // max-width: 100%;
+
+  @media screen and (min-width: $mobileWidth) {
+    width: 450px;
+    height: 294px;
+  }
+
+  @media screen and (min-width: $desktopWidth) {
+    width: 370px;
+    height: 294px;
+  }
 }
 
 .works-element {
@@ -35,10 +47,6 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 
-  @media screen and (min-width: $tabletWidth) {
-    width: 450px;
-  }
-
   @media screen and (max-width: 1199px) {
     &:last-child {
       margin-bottom: 0;
@@ -47,6 +55,7 @@
 
   @media screen and (min-width: $tabletWidth) {
     width: 354px;
+    height: 404px;
     &:nth-child(odd) {
       margin-right: 30px;
     }

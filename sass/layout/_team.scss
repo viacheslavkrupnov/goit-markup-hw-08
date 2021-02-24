@@ -30,7 +30,8 @@
 .team-item {
   text-align: center;
 
-  width: 450px;
+  width: 100%;
+  height: auto;
   margin-bottom: 30px;
   background: $primaryWhiteColor;
 
@@ -45,6 +46,7 @@
 
   @media screen and (min-width: $tabletWidth) {
     width: 354px;
+    height: 536px;
 
     &:nth-last-child(-n + 2) {
       margin-bottom: 0;
@@ -56,6 +58,7 @@
 
     @media screen and (min-width: $desktopWidth) {
       width: 270px;
+      height: auto;
       margin-right: 30px;
       margin-bottom: 0;
 
