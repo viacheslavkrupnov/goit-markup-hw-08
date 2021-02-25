@@ -15,21 +15,6 @@
   padding-bottom: 20px;
 }
 
-.card-image {
-  display: block;
-  height: 294px;
-
-  @media screen and (min-width: $mobileWidth) {
-    width: 450px;
-    height: 294px;
-  }
-
-  @media screen and (min-width: $desktopWidth) {
-    width: 370px;
-    height: 294px;
-  }
-}
-
 .works-element {
   width: 100%;
   height: 100%;
