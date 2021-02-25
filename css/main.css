@@ -355,8 +355,8 @@ img {
   padding-bottom: 118px;
 }
 
-@media screen and (min-resoltion: 2dppx) {
-  .hero .hero {
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/mobile@2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/mobile@2x.jpg");
   }
@@ -377,7 +377,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) and (min-resoltion: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/tablet@2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/tablet@2x.jpg");
@@ -391,7 +391,7 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) and (min-resoltion: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/desktop@2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/desktop@2x.jpg");
@@ -1916,6 +1916,18 @@ textarea {
   }
 }
 
+@media screen and (min-width: 320px) {
+  .nav-page {
+    margin-bottom: 250px;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  .nav-page {
+    margin-bottom: 302px;
+  }
+}
+
 .nav-page .link {
   color: #212121;
   font-weight: 500;
@@ -1938,10 +1950,6 @@ textarea {
 
 .nav-page .link.current {
   color: #2196f3;
-}
-
-.nav-page:last-child {
-  margin-bottom: 302px;
 }
 
 .contacts-mobile .link {
@@ -1971,9 +1979,11 @@ textarea {
 }
 
 .social-mobile {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .social-mobile .link {
