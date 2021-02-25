@@ -272,8 +272,6 @@ img {
 
 .logo-footer {
   color: #fff;
-  padding-top: 60px;
-  padding-bottom: 20px;
 }
 
 .social-logo {
@@ -1266,7 +1264,7 @@ img {
   position: absolute;
   content: '';
   width: 100%;
-  height: auto;
+  height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -1517,8 +1515,9 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 20px;
   width: 206px;
   margin-left: auto;
@@ -1526,14 +1525,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.social-item .bottom {
-  margin-right: 5px;
-}
-
-.social-item .bottom:nth-child(4n) {
-  margin-right: 0;
 }
 
 .footer-subscription {
@@ -1894,7 +1885,6 @@ textarea {
   background-color: #fff;
   text-align: left;
   padding: 48px 40px;
-  height: 796px;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   z-index: 1;
@@ -1913,12 +1903,6 @@ textarea {
   }
   .menu-container.is-open {
     display: block;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .nav-page {
-    margin-bottom: 250px;
   }
 }
 
