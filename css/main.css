@@ -340,7 +340,7 @@ img {
 }
 
 .hero {
-  min-width: 100%;
+  max-width: 100%;
   min-height: 400px;
   margin-left: auto;
   margin-right: auto;
@@ -1911,9 +1911,7 @@ textarea {
   display: none;
   position: absolute;
   top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0) scale(1);
-          transform: translate(-50%, 0) scale(1);
+  left: 0;
   background-color: #fff;
   text-align: left;
   padding: 48px 40px;
@@ -1923,15 +1921,10 @@ textarea {
   z-index: 1;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 320px) {
   .menu-container {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .menu-container {
-    min-width: 480px;
+    min-width: 100%;
+    min-height: 100%;
   }
 }
 
